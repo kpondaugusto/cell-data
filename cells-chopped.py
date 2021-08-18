@@ -15,14 +15,32 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('cells.csv')
 print(df)
 
-keep_col = ['Cell10']
-new_df = df[keep_col]
+
+keep_col = ['Cell10','Cell10bake1','Cell10bake2','Cell10bake3','Cell12','Cell12bake1',
+            'Cell13','Cell13bake1','Cell13bake2','Cell14','Cell14bake1','Cell16',
+            'Cell16bake1']
+df_bake = df[keep_col]
+
+keep_col2 = ['Cell11','Cell15','Cell17']
+df_nobake = df[keep_col2]
 
 
-data_out = pd.concat([df],axis=1)
 
+data_out = pd.concat([df_bake],axis=1)
 
 data_out.plot()
 
 
+data_out = pd.concat([df_nobake],axis=1)
+
+data_out.plot()
+
+
+
+
 plt.show()
+
+
+
+
+
