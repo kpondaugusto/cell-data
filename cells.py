@@ -79,7 +79,7 @@ data_out.to_csv(r'/Users/kierapond/Documents/GitHub/cell-data/cells.csv', index=
 
 # x='Date'
 
-data_out.plot(style='.-')
+data_out.plot(style='.')
 
 
 plt.show()
