@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 ############################# Read files #############################
 
 df = pd.read_csv('allcells_abspeak.csv')
-print(df)
+#sprint(df)
 
 
 keep_col = ['Cell10bake1','Cell10bake2','Cell10bake3','Cell12bake1',
@@ -37,7 +37,7 @@ data_out.plot.line(style='.-',color={"Cell10bake1": "pink", "Cell10bake2": "blue
                                     "Cell13bake1": "blue",
                                     "Cell13bake2": "blue",  
                                     "Cell14bake1": "pink","Cell15bake1": "green",
-                                    "Cell16bake1": "pink","Cell17bake1": "green"}, #legend=False,
+                                    "Cell16bake1": "pink","Cell17bake1": "green"}, legend=False,
                    xlabel='Time', ylabel='Lifetime (ms)')
 
 #blue = short bake (1 - 8 hrs in oven or water bath)
