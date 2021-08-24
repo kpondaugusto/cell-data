@@ -20,8 +20,8 @@ print(df)
 
 
 keep_col = ['Cell10bake1','Cell10bake2','Cell10bake3','Cell12bake1',
-           'Cell13bake1','Cell13bake2','Cell14bake1',
-            'Cell16bake1']
+           'Cell13bake1','Cell13bake2','Cell14bake1','Cell15bake1',
+            'Cell16bake1','Cell17bake1']
 df_bake = df[keep_col]
 
 
@@ -36,8 +36,8 @@ data_out.plot.line(style='.-',color={"Cell10bake1": "pink", "Cell10bake2": "blue
                                     "Cell12bake1": "blue", 
                                     "Cell13bake1": "blue",
                                     "Cell13bake2": "blue",  
-                                    "Cell14bake1": "pink",
-                                    "Cell16bake1": "pink"}, #legend=False,
+                                    "Cell14bake1": "pink","Cell15bake1": "green",
+                                    "Cell16bake1": "pink","Cell17bake1": "green"}, #legend=False,
                    xlabel='Time', ylabel='Lifetime (ms)')
 
 #blue = short bake (1 - 8 hrs in oven or water bath)
@@ -55,7 +55,7 @@ plt.tick_params(
 #All cells that have not been baked where left of the red line
 #is before baking, red line = baking, right of red line = after bake
 
-keep_col2 = ['Cell11','Cell15','Cell17']
+keep_col2 = ['Cell11']
 df_nobake = df[keep_col2]
 
 
@@ -79,16 +79,16 @@ plt.show()
 #is before baking, red line = baking, right of red line = after bake
 
 
-# keep_col3 = ['Cell10bake1']
-# df_onecell = df[keep_col3]
+keep_col3 = ['Cell10bake1']
+df_onecell = df[keep_col3]
 
-# data_out = pd.concat([df_onecell],axis=1)
+data_out = pd.concat([df_onecell],axis=1)
 
-# data_out.plot(style='.',xlabel='Time', ylabel='Lifetime (ms)')
+data_out.plot(style='.',xlabel='Time', ylabel='Lifetime (ms)')
 
-# plt.axvline(3.5,color='r')
+plt.axvline(3.5,color='r')
 
-# plt.show()
+plt.show()
 
 
 
