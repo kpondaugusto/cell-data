@@ -39,19 +39,13 @@ data_out.plot.line(style='.',color={"Cell10bake1": "pink", "Cell10bake2": "blue"
                                     "Cell13bake2": "blue",  
                                     "Cell14bake1": "pink","Cell15bake1": "green",
                                     "Cell16bake1": "pink", "Cell17bake1": "green"}, legend=False,
-                   xlabel='Time', ylabel='Lifetime (ms)')
+                   xlabel='Measurement Number', ylabel='Lifetime (ms)')
  
 #blue = short bake (1 - 8 hrs in oven or water bath)
 #pink = long bake (23 + hrs in oven)
 
 plt.axvline(3.5,color='r')
 
-plt.tick_params(
-    axis='x',          # changes apply to the x-axis
-    which='both',      # both major and minor ticks are affected
-    bottom=False,      # ticks along the bottom edge are off
-    top=False,         # ticks along the top edge are off
-    labelbottom=False)  # labels along the bottom edge are off
 
 #All cells that have not been baked where left of the red line
 #is before baking, red line = baking, right of red line = after bake
@@ -62,14 +56,7 @@ df_nobake = df[keep_col2]
 
 data_out = pd.concat([df_nobake],axis=1)
 
-data_out.plot(style='.',xlabel='Time', ylabel='Lifetime (ms)')
-
-plt.tick_params(
-    axis='x',          # changes apply to the x-axis
-    which='both',      # both major and minor ticks are affected
-    bottom=False,      # ticks along the bottom edge are off
-    top=False,         # ticks along the top edge are off
-    labelbottom=False)  # labels along the bottom edge are off
+data_out.plot(style='.',xlabel='Measurement Number', ylabel='Lifetime (ms)')
 
 
 
@@ -85,7 +72,7 @@ df_onecell = df[keep_col3]
 
 data_out = pd.concat([df_onecell],axis=1)
 
-data_out.plot(style='.',xlabel='Time', ylabel='Lifetime (ms)')
+data_out.plot(style='.',xlabel='Measurement Number', ylabel='Lifetime (ms)')
 
 plt.axvline(3.5,color='r')
 
