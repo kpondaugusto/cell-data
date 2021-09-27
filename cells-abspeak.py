@@ -33,7 +33,8 @@ new_df = df[keep_col]
 
 data_out = pd.concat([new_df],axis=1)
 
-data_out.plot(style='.-',xlabel='Measurement Number', ylabel='Absorption Peak')
+data_out.plot(style='.-',xlabel='Measurement Number', ylabel='Absorption Peak',
+              legend=False)
 
 
 plt.axvline(3.5,color='r')

@@ -39,7 +39,8 @@ data_out = pd.concat([new_df],axis=1)
 
 # x='Date'
 
-data_out.plot(style='.-',xlabel='Measurement Number', ylabel='Lifetime (ms)')
+data_out.plot(style='.-',xlabel='Measurement Number', ylabel='Lifetime (ms)',
+              legend=False)
 
 
 plt.axvline(3.5,color='r')
